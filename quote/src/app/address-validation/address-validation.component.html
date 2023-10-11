@@ -1,0 +1,10 @@
+<div>
+    <input type="text" placeholder="Enter an address" [(ngModel)]="address">
+    <button (click)="validateAddress()">Validate Address</button>
+  </div>
+  
+  <div *ngFor="let addr of addresses">
+    <h3>Address: {{ addr.address }}</h3>
+    <pre>{{ addr.validationResults | json }}</pre>
+  </div>
+  
